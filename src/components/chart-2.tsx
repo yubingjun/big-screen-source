@@ -10,6 +10,13 @@ export const Chart2 = () =>{
     var myChart = echarts.init(divRef.current);
     myChart.setOption(createEchartsOptions({
       ...baseEchartsOptions,
+      grid: {
+        containLabel:true,
+        x: px(20),
+        y: px(20),
+        x2: px(20),
+        y2: px(40)
+      },
       xAxis: {
         type: 'value',
         boundaryGap: [0, 0.01],
@@ -66,12 +73,11 @@ export const Chart2 = () =>{
   return (
     <div className="bordered 破获排名">
       <h2>案件破获排名</h2>
-      <div ref={divRef} className="chart">
+      <div ref={divRef} className="chart"/>
         <div className="legend">
           <span className="first"/>破案排名
           <span className="second"/>破案速度
         </div>
       </div>
-    </div>
   );
 }
