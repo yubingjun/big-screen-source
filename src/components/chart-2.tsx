@@ -10,20 +10,19 @@ export const Chart2 = () =>{
     var myChart = echarts.init(divRef.current);
     myChart.setOption(createEchartsOptions({
       ...baseEchartsOptions,
-      grid: {
-        containLabel:true,
-        x: px(20),
-        y: px(40),
-        x2: px(10),
-        y2: px(40)
-      },
       xAxis: {
         type: 'value',
         boundaryGap: [0, 0.01]
       },
       yAxis: {
         type: 'category',
-        data: ['Brazil', 'Indonesia', 'USA', 'India', 'China', 'World']
+        data: ['城关区公安局', '七里河区公安局', '西固区公安局', '安宁区公安局', '红古区公安局',
+          '永登县公安局','皋兰县公安局','榆中县公安局','新区公安局'],
+        axisLabel:{
+          formatter(val) {
+            return val.replace('公安局','\n公安局')
+          }
+        }
       },
       series: [
         {
