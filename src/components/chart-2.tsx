@@ -10,13 +10,6 @@ export const Chart2 = () =>{
     var myChart = echarts.init(divRef.current);
     myChart.setOption(createEchartsOptions({
       ...baseEchartsOptions,
-      grid: {
-        containLabel:true,
-        x: px(20),
-        y: px(20),
-        x2: px(20),
-        y2: px(40)
-      },
       xAxis: {
         type: 'value',
         boundaryGap: [0, 0.01],
