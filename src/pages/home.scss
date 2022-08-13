@@ -10,8 +10,22 @@
   > header{
     height: px(99);
     background-size: cover;
+    width: px(2420);
+    margin: 0 auto;
+  }
+  > footer{
+    height: px(66);
+    border: 1px solid #0d2d59;
+    margin: px(10) 0 1px;
+    border-radius: 4px;
+    background: #0c0d2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   > main {
+    width: px(2420);
+    margin: 0 auto;
     padding: px(30);
     flex: 1;
     display: grid;
@@ -59,6 +73,9 @@
     }
     > .section2 {
       grid-area: box2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     > .section3 {
       grid-area: box3;
@@ -69,8 +86,9 @@
     > .section5 {
       grid-area: box5;
     }
-    .管辖统计,.破获排名{
-      height:px(315);
+    .管辖统计,.破获排名,.发案趋势,.案发时段{
+      //height:px(315);
+      height:px(310);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -89,8 +107,12 @@
         width: 100%;
       }
     }
+    .发案趋势, .案发时段{
+      height: px(363);
+    }
     .破获排名 {
-      height: px(423);
+      //height: px(423);
+      height: px(415);
       .legend {
         display: flex;
         align-items: center;
