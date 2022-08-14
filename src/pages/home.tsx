@@ -60,7 +60,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="bordered row2 案发街道">
-            <h2>案发街道统计</h2>
+            <h2>案发地级市统计</h2>
             <div className="charts">
               <Chart12/>
               <Chart13/>
