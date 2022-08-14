@@ -1,6 +1,5 @@
 import React from 'react';
 import './home.scss';
-import headerBg from '../images/header.png';
 import {Chart1} from '../components/chart-1';
 import {Chart2} from '../components/chart-2';
 import {Chart3} from '../components/chart-3';
@@ -21,7 +20,10 @@ export const Home = () => {
   const year = new Date().getFullYear();
   return (
     <div className="home">
-      <header style={{backgroundImage: `url(${headerBg})`}}></header>
+      {/*<header style={{backgroundImage: `url(${headerBg})`}}></header>*/}
+      <header>
+        <span>国家公安合成作战平台</span>
+      </header>
       <main>
         <section className="section1">
           <Chart1/>
@@ -36,6 +38,10 @@ export const Home = () => {
         </section>
         <section className="section4">
           <Chart6/>
+          <div className="ring">
+            <div className="radar"/>
+          </div>
+          <span>数据实时监控中</span>
           <div className="bordered 年龄段">
             <h2>犯罪人员年龄段分布</h2>
             <div className="charts">
