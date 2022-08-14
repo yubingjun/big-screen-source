@@ -98,9 +98,21 @@
 
     > .section5 {
       grid-area: box5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > .row1 {
+        height: px(317);
+      }
+      > .row2 {
+        height: px(317);
+      }
+      > .row3 {
+        height: px(455);
+      }
     }
 
-    .管辖统计, .破获排名, .发案趋势, .案发时段, .战果, .籍贯, .年龄段 {
+    .管辖统计, .破获排名, .发案趋势, .案发时段, .战果, .籍贯, .年龄段, .案发类型, .案发街道, .作案手段 {
       //height:px(315);
       height: px(310);
       display: flex;
@@ -117,7 +129,10 @@
         padding: px(10) px(28);
         text-shadow: 0 0 px(3) white;
       }
-
+      .charts {
+        width: 100%;flex: 1;
+        display: flex;
+      }
       .chart {
         flex: 1;
         width: 100%;
@@ -134,9 +149,6 @@
       height: px(363);
 
       > .charts {
-        width: 100%;
-        flex: 1;
-        display: flex;
         padding: px(30);
       }
 
@@ -151,7 +163,7 @@
           height: px(40);
           display: flex;
           align-items: center;
-          justify-content: center; flex-wrap: wrap;
+          justify-content: center; flex-wrap: wrap; padding-right: px(10);
           > span {display: inline-block; width: px(16); height: px(10);
             border-radius: px(2); margin: 0 px(10);}
 
